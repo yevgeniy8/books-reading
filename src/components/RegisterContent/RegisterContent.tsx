@@ -1,6 +1,6 @@
 import React from 'react';
 
-const RegisterContent = () => {
+const RegisterContent: React.FC = () => {
     return (
         <div>
             <h1>Books Reading</h1>
