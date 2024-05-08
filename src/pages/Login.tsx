@@ -1,12 +1,12 @@
 import React from 'react';
-import LoginForm from '../components/Auth/LoginForm';
+import { AuthSection } from '../components/AuthSection';
+import { LogInForm } from '../components/AuthForms';
+import { QuoteCard } from '../components/QuoteCard';
 
-const Login = () => {
-    return (
-        <div>
-            <LoginForm />
-        </div>
-    );
-};
+const LogIn: React.FC = () => (
+    <AuthSection form={LogInForm} title="Сторінка входу до профілю">
+        <QuoteCard />
+    </AuthSection>
+);
 
-export default Login;
+export default LogIn;

@@ -1,14 +1,12 @@
-import React from 'react';
-import RegisterForm from '../components/Auth/RegisterForm';
-import RegisterContent from '../components/RegisterContent/RegisterContent';
+import React from "react";
+import { AuthSection } from "../components/AuthSection";
+import { RegisterForm } from "../components/AuthForms";
+import { InfoSection } from "../components/InfoSection";
 
-const Register = () => {
-    return (
-        <div>
-            <RegisterForm />
-            <RegisterContent />
-        </div>
-    );
-};
+const Register: React.FC = () => (
+  <AuthSection form={RegisterForm} title="Сторінка реєстрації">
+    <InfoSection />
+  </AuthSection>
+);
 
 export default Register;
