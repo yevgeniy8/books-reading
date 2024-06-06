@@ -93,6 +93,20 @@ export const Title = styled.h3`
   }
 `;
 
+export const WrapperStats = styled.div`
+  overflow: hidden;
+  overflow-y: auto;
+  height: 120px;
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    height: 250px;
+  }
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.dekstop}) {
+    height: 120px;
+  }
+`
+
 export const Item = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -117,6 +131,7 @@ export const Pages = styled.div`
   justify-content: end;
   align-items: center;
   gap: 4px;
+  margin-right: 10px;
 `;
 
 export const Value = styled.p`

@@ -1,6 +1,5 @@
 import React, { useMemo } from 'react';
 import { format } from 'date-fns';
-import { Swiper, SwiperSlide } from 'swiper/react';
 import { selectStats } from '../../redux/statistics/selectors';
 import { selectStatus } from '../../redux/planning/selectors';
 import { useAppSelector } from '../../hooks';
@@ -45,36 +44,18 @@ export const StatisticsList: React.FC = () => {
             {<S.Title>Статистика</S.Title>}
 
             {statsList.length ? (
-                <S.SwiperContainer>
-                    <Swiper
-                        {...{
-                            slidesPerView: 5,
-                            spaceBetween: 4,
-                            direction: 'vertical',
-                            breakpoints: {
-                                768: {
-                                    slidesPerView: 10,
-                                },
-                                1312: {
-                                    slidesPerView: 5,
-                                },
-                            },
-                        }}
-                    >
-                        {statsList.map(({ date, time, pages, _id }) => (
-                            <SwiperSlide key={_id}>
-                                <S.Item>
-                                    <S.Date>{date}</S.Date>
-                                    <S.Time>{time}</S.Time>
-                                    <S.Pages>
-                                        <S.Value>{pages}</S.Value>
-                                        <S.Descr>стор.</S.Descr>
-                                    </S.Pages>
-                                </S.Item>
-                            </SwiperSlide>
-                        ))}
-                    </Swiper>
-                </S.SwiperContainer>
+                <S.WrapperStats>
+                    {statsList.map(({ date, time, pages, _id }) => (
+                        <S.Item>
+                            <S.Date>{date}</S.Date>
+                            <S.Time>{time}</S.Time>
+                            <S.Pages>
+                                <S.Value>{pages}</S.Value>
+                                <S.Descr>стор.</S.Descr>
+                            </S.Pages>
+                        </S.Item>
+                    ))}
+                </S.WrapperStats>
             ) : (
                 <S.Info>{message}</S.Info>
             )}
