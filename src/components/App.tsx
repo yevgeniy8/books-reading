@@ -6,7 +6,7 @@ import { RestrictedRoute } from '../components/RestrictedRoute';
 import { BookAddSection } from '../components/BookAddSection';
 import { BookSelectSection } from '../components/BookSelectSection';
 import { PageLoader } from '../components/Loaders';
-import { NotFound } from './NotFound';
+import { NotFound } from './NotFound/NotFound';
 import { useAppDispatch, useAuth } from '../hooks';
 import { refreshUser } from '../redux/auth/operations';
 

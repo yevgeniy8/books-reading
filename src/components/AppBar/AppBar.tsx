@@ -12,7 +12,7 @@ export const AppBar: React.FC = () => {
   return (
     <S.Header>
       <S.Container>
-        <S.Logo isLoggedIn={isLoggedIn}>BR</S.Logo>
+        <S.Logo>BR</S.Logo>
 
         {isLoggedIn && (
           <>

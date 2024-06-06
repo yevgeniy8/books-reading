@@ -24,9 +24,8 @@ export const Container = styled(PrimaryContainer)`
   min-height: 60px;
 `;
 
-export const Logo = styled.span<{ isLoggedIn: boolean }>`
+export const Logo = styled.span`
   display: block;
-  flex-grow: ${({ isLoggedIn }) => (isLoggedIn ? 0 : 1)};
 
   font-family: ${({ theme }) => theme.fontFamily.logo};
   font-weight: 400;

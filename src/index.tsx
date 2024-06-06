@@ -8,7 +8,7 @@ import { theme } from './constants/';
 import { store } from './redux/store';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-    <React.StrictMode>
+    // <React.StrictMode>
         <Provider store={store}>
             <BrowserRouter>
                 <ThemeProvider theme={theme}>
@@ -16,5 +16,5 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
                 </ThemeProvider>
             </BrowserRouter>
         </Provider>
-    </React.StrictMode>
+    // </React.StrictMode>
 );
