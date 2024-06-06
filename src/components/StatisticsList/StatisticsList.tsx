@@ -46,7 +46,7 @@ export const StatisticsList: React.FC = () => {
             {statsList.length ? (
                 <S.WrapperStats>
                     {statsList.map(({ date, time, pages, _id }) => (
-                        <S.Item>
+                        <S.Item key={_id}>
                             <S.Date>{date}</S.Date>
                             <S.Time>{time}</S.Time>
                             <S.Pages>
